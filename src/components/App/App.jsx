@@ -1,11 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Header from '../Header';
-import ShoeIndex from '../ShoeIndex';
+import { QUERIES } from "../../constants";
+
+import Header from "../Header";
+import ShoeIndex from "../ShoeIndex";
 
 const App = () => {
-  const [sortId, setSortId] = React.useState('newest');
+  const [sortId, setSortId] = React.useState("newest");
 
   return (
     <>
@@ -19,6 +21,14 @@ const App = () => {
 
 const Main = styled.main`
   padding: 64px 32px;
+
+  @media ${QUERIES.tabletAndBelow} {
+    padding: 48px 32px;
+  }
+
+  @media ${QUERIES.phoneAndBelow} {
+    padding: 48px 16px;
+  }
 `;
 
 export default App;
