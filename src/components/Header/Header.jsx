@@ -7,6 +7,7 @@ import SuperHeader from "../SuperHeader";
 import MobileMenu from "../MobileMenu";
 import UnstyledButton from "../UnstyledButton";
 import Icon from "../Icon";
+import VisuallyHidden from "../VisuallyHidden";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -23,24 +24,27 @@ const Header = () => {
         <Side>
           <Logo />
         </Side>
-        <Nav>
+        <DesktopNav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
-        </Nav>
+        </DesktopNav>
         <Side />
         <MobileNav>
           <UnstyledButton>
             <Icon id="shopping-bag" strokeWidth={1} />
+            <VisuallyHidden>Open cart</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
             <Icon id="search" strokeWidth={1} />
+            <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
             <Icon id="menu" strokeWidth={1} />
+            <VisuallyHidden>Open menu</VisuallyHidden>
           </UnstyledButton>
         </MobileNav>
       </MainHeader>
@@ -69,7 +73,7 @@ const MainHeader = styled.div`
   }
 `;
 
-const Nav = styled.nav`
+const DesktopNav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
