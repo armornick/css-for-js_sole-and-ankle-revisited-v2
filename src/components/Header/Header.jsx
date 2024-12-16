@@ -25,14 +25,13 @@ const Header = () => {
           <Logo />
         </Side>
         <DesktopNav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
+          <NavLink href="/sale">À Vendre</NavLink>
+          <NavLink href="/new">Nouvelles Versions</NavLink>
+          <NavLink href="/men">Hommes</NavLink>
+          <NavLink href="/women">Femmes</NavLink>
+          <NavLink href="/kids">Enfants</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </DesktopNav>
-        <Side />
         <MobileNav>
           <UnstyledButton>
             <Icon id="shopping-bag" strokeWidth={1} />
@@ -60,6 +59,7 @@ const Header = () => {
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
+  gap: 48px;
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
@@ -75,8 +75,8 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
-  margin: 0px 48px;
+  gap: clamp(1rem, 5vw - 3rem, 3rem);
+  overflow-x: auto;
 
   @media ${QUERIES.tabletAndBelow} {
     display: none;
