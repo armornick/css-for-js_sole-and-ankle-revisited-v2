@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import * as Dialog from "@radix-ui/react-dialog";
 
-import { COLORS, WEIGHTS } from "../../constants";
-
 import UnstyledButton from "../UnstyledButton";
 import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden";
@@ -59,7 +57,7 @@ const DialogContent = styled(Dialog.Content)`
 
   width: 300px;
   padding: 32px;
-  background-color: ${COLORS.white};
+  background-color: var(--color-white);
 
   display: flex;
   flex-direction: column;
@@ -82,13 +80,13 @@ const DialogNav = styled.nav`
 `;
 
 const DialogNavLink = styled(UnstyledLink)`
-  color ${COLORS.gray[900]};
+  color var(--color-gray-900);
   font-size: ${18 / 16}rem;
-  font-weight: ${WEIGHTS.medium};
+  font-weight: var(--weight-medium);
   text-transform: uppercase;
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -99,9 +97,9 @@ const DialogFooter = styled.footer`
 `;
 
 const DialogFooterLink = styled(UnstyledLink)`
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   font-size: ${14 / 16}rem;
-  font-weight: ${WEIGHTS.normal};
+  font-weight: var(--weight-normal);
 `;
 
 export default MobileMenu;
