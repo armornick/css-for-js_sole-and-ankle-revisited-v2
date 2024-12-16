@@ -86,6 +86,10 @@ const DialogNavLink = styled(UnstyledLink)`
   font-size: ${18 / 16}rem;
   font-weight: ${WEIGHTS.medium};
   text-transform: uppercase;
+
+  &:first-of-type {
+    color: ${COLORS.secondary};
+  }
 `;
 
 const DialogFooter = styled.footer`
