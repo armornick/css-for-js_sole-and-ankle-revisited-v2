@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-900: hsl(220deg 3% 20%);
     --color-primary: hsl(340deg 65% 47%);
     --color-secondary: hsl(240deg 60% 63%);
+    --color-overlay: hsl(220deg 5% 40% / 50%);
 
     --weight-normal: 500;
     --weight-medium: 600;

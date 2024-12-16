@@ -49,7 +49,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 const Overlay = styled(Dialog.Overlay)`
   position: fixed;
   inset: 0;
-  background-color: hsl(0deg 0% 0% / 50%);
+  background-color: ;
 `;
 
 const DialogContent = styled(Dialog.Content)`
